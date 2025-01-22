@@ -1,8 +1,6 @@
-// Logo
-import Logo from "../../src/assets/logo-512.png";
-import LogoWhite from "../../src/assets/logo--white.png";
+// Previous Cases
+import KBlock from "../../src/assets/k-block/kblock.png";
 
-export const Home = {
-  Logo,
-  LogoWhite,
+export const home = {
+  KBlock,
 };

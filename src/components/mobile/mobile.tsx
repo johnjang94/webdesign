@@ -1,9 +1,11 @@
-import { useState } from "react";
 import { useRouter } from "next/router";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
+import { useState } from "react";
+import { useTheme } from "../theme/mode";
 
 export default function Mobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
   const router = useRouter();
 
   const toggleMenu = () => {
@@ -28,7 +30,7 @@ export default function Mobile() {
       </button>
 
       <div
-        className={`fixed inset-y-0 left-0 w-[80vw] max-h-screen bg-slate-100 shadow overflow-y-scroll z-50 transition-transform duration-300 ease-in-out rounded-2xl ${
+        className={`fixed inset-y-0 left-0 w-[80vw] max-h-screen bg-slate-100 dark:bg-gray-800 shadow overflow-y-scroll z-50 transition-transform duration-300 ease-in-out rounded-2xl ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -66,8 +68,22 @@ export default function Mobile() {
                 : "-translate-x-full delay-[400ms]"
             }`}
           >
-            <button onClick={() => handleNavigation("/resume")} className="p-2">
-              resume
+            <button
+              onClick={() => handleNavigation("/contact")}
+              className="p-2"
+            >
+              contact
+            </button>
+          </li>
+          <li
+            className={`text-xl sm:text-sm transition-transform duration-500 ease-in-out ml-2 ${
+              isMenuOpen
+                ? "translate-x-0 delay-[800ms]"
+                : "-translate-x-full delay-[200ms]"
+            } mt-5`}
+          >
+            <button onClick={toggleTheme}>
+              {theme === "dark" ? "light mode" : "dark mode"}
             </button>
           </li>
         </ul>
