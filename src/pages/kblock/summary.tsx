@@ -1,7 +1,3 @@
-import Image from "next/image";
-import { Kblock } from "../../../public/utils/k-block";
-import { FaLongArrowAltDown } from "react-icons/fa";
-
 export default function Summary() {
   return (
     <div>
@@ -15,8 +11,9 @@ export default function Summary() {
               NFTs, verified NFT properties, NFT creator profiles, etc.
               Collaborating closely with the UX Design team, I translated design
               languages into aesthetic UI while aiming to boost brand visibility
-              by 15%, especially on <span className="font-bold">home page</span>
-              , <span className="font-bold">display of transactions</span>, and{" "}
+              by 15%, especially working on{" "}
+              <span className="font-bold">home page</span>,{" "}
+              <span className="font-bold">display of transactions</span>, and{" "}
               <span className="font-bold">NFT Dashboard</span>.
             </p>
           </div>
@@ -53,37 +50,18 @@ export default function Summary() {
               </div>
             </div>
           </div>
-        </section>
-
-        {/* Product */}
-        <section className="space-y-5">
-          <h2 className="font-semibold">Product</h2>
-          <div>
+          <div className="mx-auto text-center justify-center">
             <button
-              onClick={() =>
-                window.open(
-                  "https://kblock.vercel.app/",
-                  "_blank",
-                  "noopener noreferrer"
-                )
-              }
-              className="focus:outline-none space-y-3"
+              onClick={() => {
+                const element = document.getElementById("product-showcase");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
-              <div className="flex items-center justify-center">
-                <p>
-                  Check out the live demo: Experience the Kadena Blockchain
-                  Explorer in action!{" "}
-                </p>
-                <FaLongArrowAltDown />
-              </div>
-              <Image
-                src={Kblock.KBlock}
-                alt="Demo showcase of Kadena Blockchain Explorer"
-                className="rounded-xl mx-auto hover:cursor-pointer hover:shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px]"
-                width={800}
-                height={450}
-                priority
-              />
+              <p className="text-blue-500 underline">
+                Click here to skip down to the live demo!
+              </p>
             </button>
           </div>
         </section>

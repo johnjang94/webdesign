@@ -11,8 +11,10 @@ export default function Design() {
           <ul className="space-y-3 md:px-8">
             <li className="font-bold">Visuals</li>
             <p>
-              A spectrum of blue colors was chosen as the primary color because
-              blue is typically associated with trust, loyalty, and commitment.
+              In terms of color, a spectrum of blue colors was chosen as the
+              primary color because blue is typically associated with trust,
+              loyalty, and commitment. Besides the blue colors, red and green
+              colors were used to indicate the price rise and fall.
             </p>
             <Image
               src={Kblock.Visuals}
@@ -26,35 +28,43 @@ export default function Design() {
               width={1200}
               className="rounded-2xl"
             />
+            <div className="md: grid md:grid-cols-2 gap-20">
+              <div>
+                <Image
+                  src={Kblock.Green}
+                  alt="Greens"
+                  width={280}
+                  className="rounded-2xl"
+                />
+                <Image
+                  src={Kblock.GLabel}
+                  alt="Green label"
+                  width={280}
+                  className="rounded-2xl"
+                />
+              </div>
+              <div>
+                <Image
+                  src={Kblock.Red}
+                  alt="Red"
+                  width={280}
+                  className="rounded-2xl"
+                />
+                <Image
+                  src={Kblock.RLabel}
+                  alt="Red label"
+                  width={280}
+                  className="rounded-2xl"
+                />
+              </div>
+            </div>
           </ul>
           {/*  */}
           <ul className="space-y-3 md:px-8 py-10">
-            <p>Green was used to indicate the rise in the market.</p>
-            <Image
-              src={Kblock.Green}
-              alt="Greens"
-              width={280}
-              className="rounded-2xl"
-            />
-            <Image
-              src={Kblock.GLabel}
-              alt="Green label"
-              width={280}
-              className="rounded-2xl"
-            />
-            <Image
-              src={Kblock.Rise}
-              alt="Rise"
-              width={1200}
-              className="rounded-2xl"
-            />
-          </ul>
-          {/*  */}
-          <ul className="space-y-3 md:px-8">
             <p>
-              Inter is one of the most common fonts that is used in the industry
-              today. I worked with the design team and created a typography
-              hierarchy depending on the title, the body, or indicators.
+              For font, Inter was chosen to follow the industry-standard and I
+              created a detailed annotation note for the reference in the future
+              development.
             </p>
             <Image
               src={Kblock.Inter}
@@ -63,39 +73,6 @@ export default function Design() {
               className="rounded-2xl"
             />
             <Image
-              src={Kblock.Typography}
-              alt="Typography"
-              width={1200}
-              className="rounded-2xl"
-            />
-          </ul>
-          {/*  */}
-          <ul className="space-y-3 md:px-8 py-10">
-            <p>
-              Along with the designers, I considered the spacing of 4 pixels for
-              every indicator. I considered the responsiveness of the elements,
-              too.
-            </p>
-            <Image
-              src={Kblock.Spacing}
-              alt="Spacing"
-              width={1200}
-              className="rounded-2xl bg-white p-2"
-            />
-            <Image
-              src={Kblock.SpacingExample}
-              alt="Spacing"
-              width={1200}
-              className="rounded-2xl bg-white p-2"
-            />
-          </ul>
-          {/*  */}
-          <ul className="space-y-3 md:px-8 py-10">
-            <p>
-              After all the above steps were completed, I created specific
-              design annotation notes for the process of development.
-            </p>
-            <Image
               src={Kblock.Annotation}
               alt="Annotation"
               width={1200}
@@ -103,6 +80,17 @@ export default function Design() {
             />
           </ul>
         </div>
+        <p className="font-semibold md:text-xl">Into Development Language</p>
+        <p className="md:mx-16">
+          I converted all the information listed above into computer-oriented
+          language such as Next.js, React, and Tailwind CSS.
+        </p>
+        <Image
+          src={Kblock.Development}
+          alt="Development"
+          width={1200}
+          className="rounded-2xl"
+        />
       </div>
     </div>
   );

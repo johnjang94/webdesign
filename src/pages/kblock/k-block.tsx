@@ -3,8 +3,15 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import ContentNav from "../../components/content/navigation";
 import { Kblock } from "../../../public/utils/k-block";
+
+// Importing Parts
 import Summary from "./summary";
+import Research from "./research";
+import Opportunity from "./opportunity";
 import Design from "./design";
+import Solutions from "./solutions";
+import Reflection from "./reflection";
+import Redirect from "@/components/redirect/to-home";
 
 export default function KBLOCK() {
   const router = useRouter();
@@ -51,11 +58,20 @@ export default function KBLOCK() {
       <div id="1">
         <Summary />
       </div>
+      <div>
+        <Research />
+      </div>
+      <div>
+        <Opportunity />
+      </div>
       <div id="2">
         <Design />
       </div>
+      <div>
+        <Solutions />
+      </div>
       <div id="3">
-        <h2>Solutions</h2>
+        <Reflection />
       </div>
     </div>
   );
@@ -138,6 +154,9 @@ export default function KBLOCK() {
         <section className="md:w-4/6 mx-10 my-5 md:my-28">
           <PrivateContent />
         </section>
+      </section>
+      <section>
+        <Redirect />
       </section>
     </div>
   );
