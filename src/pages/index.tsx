@@ -13,7 +13,12 @@ const data = [
     title: "Transforming inventory management with 40% faster workflow",
     subtitle:
       "Implemented new system for onboarding, room management, and catering services",
-    category: ["Web Application", "B2B SaaS", "Start-up Enterprise"],
+    category: [
+      "Web Application",
+      "B2B SaaS",
+      "Start-up Enterprise",
+      "Coming soon",
+    ],
     // percentage: ["", ""],
     // highlight: ["", ""],
     link: "/operate/home",
