@@ -57,7 +57,10 @@ export default function Mobile() {
                 : "-translate-x-full delay-[600ms]"
             }`}
           >
-            <button onClick={() => handleNavigation("/about")} className="p-2">
+            <button
+              onClick={() => handleNavigation("/about-me")}
+              className="p-2"
+            >
               about
             </button>
           </li>
@@ -69,7 +72,7 @@ export default function Mobile() {
             }`}
           >
             <button
-              onClick={() => handleNavigation("/contact")}
+              onClick={() => handleNavigation("/contact-copy")}
               className="p-2"
             >
               contact

@@ -33,9 +33,9 @@ export default function Navigation() {
         )}
       </button>
       <div className="space-x-10 text-xl items-center">
-        <button onClick={() => handleRedirect("/about")}>about</button>
+        <button onClick={() => handleRedirect("/about-me")}>about</button>
         <button onClick={() => handleRedirect("/resume")}>resume</button>
-        <button onClick={() => handleRedirect("/contact")}>contact</button>
+        <button onClick={() => handleRedirect("/contact-copy")}>contact</button>
         <button className="ml-4" onClick={toggleTheme}>
           {theme === "dark" ? <MdOutlineLightMode /> : <MdDarkMode />}
         </button>
