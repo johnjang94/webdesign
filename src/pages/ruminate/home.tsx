@@ -82,13 +82,13 @@ export default function Home() {
           <div className="md:grid md:grid-cols-2 md:py-20 py-10 items-center gap-8 max-w-6xl">
             <div className="w-full md:my-20 my-5 space-y-5 text-center">
               <h1 className="md:text-4xl text-xl font-bold md:font-normal text-white">
-                Targeting to reach
+                Offering qualified, real-life feedback across
               </h1>
               <h1 className="md:text-4xl text-xl underline p-3 w-5/6 mx-auto bg-white text-green-500 rounded-2xl">
-                4-stars
+                16.5K
               </h1>
               <h1 className="md:text-4xl text-xl font-bold md:font-normal text-white">
-                at Charity Navigator
+                venues in Michigan
               </h1>
             </div>
             <div className="space-y-5 w-full flex justify-center p-9">
