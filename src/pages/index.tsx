@@ -7,27 +7,27 @@ import { useTheme } from "../components/theme/mode";
 const data = [
   {
     id: 1,
-    imgSrc: "",
-    imgAlt: "",
+    imgSrc: home.Operate,
+    imgAlt: "Operate",
     icon: "🔒",
-    title: "",
+    title: "Coming soon!",
     subtitle: "",
     category: ["", ""],
     percentage: ["", ""],
     highlight: ["", ""],
-    link: "/operate",
+    link: "/operate/index.tsx",
   },
   {
     id: 2,
-    imgSrc: "",
-    imgAlt: "",
+    imgSrc: home.Ruminate,
+    imgAlt: "Ruminate",
     icon: "",
-    title: "",
+    title: "Coming soon!",
     subtitle: "",
     category: [""],
     percentage: [""],
     highlight: [""],
-    link: "/ruminate",
+    link: "/ruminate/index.tsx",
   },
   {
     id: 3,
@@ -95,7 +95,11 @@ export default function Home() {
                 <Image
                   src={item.imgSrc}
                   alt={item.imgAlt}
-                  className="rounded-xl mx-auto"
+                  className={`rounded-xl mx-auto ${
+                    item.id === 1 || item.id === 2
+                      ? "h-[75vh] object-cover object-top"
+                      : ""
+                  }`}
                   width={1200}
                 />
               </div>
@@ -106,7 +110,7 @@ export default function Home() {
               >
                 <div className="p-2">
                   <p className="font-bold">
-                    {item.icon} {item.title}
+                    {item?.icon} {item.title}
                   </p>
                   <p className="font-normal">{item.subtitle}</p>
                 </div>
