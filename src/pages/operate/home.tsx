@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Operate() {
+export default function Home() {
   return (
     <div className="mx-auto my-48">
       <h1>This is where the case study goes in!</h1>

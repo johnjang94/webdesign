@@ -15,19 +15,20 @@ const data = [
     category: ["", ""],
     percentage: ["", ""],
     highlight: ["", ""],
-    link: "/operate/index.tsx",
+    link: "/operate/home",
   },
   {
     id: 2,
     imgSrc: home.Ruminate,
     imgAlt: "Ruminate",
     icon: "",
-    title: "Coming soon!",
-    subtitle: "",
-    category: [""],
-    percentage: [""],
-    highlight: [""],
-    link: "/ruminate/index.tsx",
+    title: "Targeting to reach 4-stars at Charity Navigator",
+    subtitle:
+      "Developed onboarding experience to promote transparency and reliability",
+    category: ["Web Application", "Non-profit"],
+    percentage: ["80%"],
+    highlight: ["intuitive UI"],
+    link: "/ruminate/home",
   },
   {
     id: 3,
@@ -130,6 +131,8 @@ export default function Home() {
                       {percentage}
                     </span>
                   ))}
+                </div>
+                <div className="md:grid grid-cols-2 text-center hidden">
                   {item.highlight?.map((highlight, index) => (
                     <span key={index}>{highlight}</span>
                   ))}

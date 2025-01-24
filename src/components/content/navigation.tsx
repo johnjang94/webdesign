@@ -44,6 +44,12 @@ export default function ContentNav({
             { id: "2", label: "Progress" },
             { id: "3", label: "Reflection" },
           ];
+        case "/ruminate/home":
+          return [
+            { id: "1", label: "Overview" },
+            { id: "2", label: "Progress" },
+            { id: "3", label: "Reflection" },
+          ];
         default:
           return initialSections;
       }
