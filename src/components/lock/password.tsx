@@ -21,6 +21,19 @@ export default function Password({ onCorrectPassword }: PasswordProps) {
     }
   };
 
+  const defaultMessage = (
+    <>
+      <p>Please find the password from my resume for more information.</p>
+    </>
+  );
+
+  const customMessage = (
+    <>
+      <p>The project is currently in-progress.</p>
+      <p>Please make an inquiry to get the latest update!</p>
+    </>
+  );
+
   return (
     <div className="flex justify-center items-center transform translate-x-[12px]">
       <div className="py-10 md:w-[55vw] w-5/6 bg-slate-300 rounded-3xl">
@@ -28,8 +41,7 @@ export default function Password({ onCorrectPassword }: PasswordProps) {
           {pathname === "/operate/home" ? "NDA" : "Want to know more?"}
         </h1>
         <div className="py-5 text-center">
-          <p>The project is currently in-progress.</p>
-          <p>Please make an inquiry to get the latest update!</p>
+          {pathname === "/operate/home" ? customMessage : defaultMessage}
         </div>
         <form
           className="flex items-center mb-3 w-4/6 mx-auto"
