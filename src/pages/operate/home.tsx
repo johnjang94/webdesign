@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { ruminate } from "../../../public/utils/ruminate";
+import { operate } from "../../../public/utils/operate";
 import ContentNav from "../../components/content/navigation";
 import Password from "../../components/lock/password";
 import ProjectDetails from "./project-detail";
@@ -89,7 +89,7 @@ export default function Home() {
             </div>
             <div className="space-y-5 w-full flex justify-center p-9">
               <Image
-                src={ruminate.Ruminate}
+                src={operate.Dashboard}
                 alt="Ruminate"
                 className="rounded-xl mx-auto h-96 object-cover object-top"
               />
