@@ -4,11 +4,7 @@ export default function Navigation() {
   const [showResume, setShowResume] = useState(false);
 
   useEffect(() => {
-    const allowedReferrers = [
-      "linkedin.com",
-      "indeed.com",
-      "webdesign-bay.vercel.app",
-    ];
+    const allowedReferrers = ["indeed.com", "webdesign-bay.vercel.app"];
 
     const referrer = document.referrer;
     const params = new URLSearchParams(window.location.search);
