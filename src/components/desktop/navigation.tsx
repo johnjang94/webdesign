@@ -13,10 +13,11 @@ export default function Navigation() {
 
   useEffect(() => {
     const allowedReferrers = ["indeed.com", "webdesign-bay.vercel.app"];
-
     const referrer = document.referrer;
     const params = new URLSearchParams(window.location.search);
     const token = params.get("token");
+
+    console.log("Referrer:", referrer);
 
     if (
       token === "secure-token" ||
