@@ -12,7 +12,11 @@ export default function Navigation() {
   const [showResume, setShowResume] = useState(false);
 
   useEffect(() => {
-    const allowedReferrers = ["indeed.com", "webdesign-bay.vercel.app"];
+    const allowedReferrers = [
+      "https://indeed.com",
+      "https://webdesign-bay.vercel.app/",
+    ];
+
     const referrer = document.referrer;
     const params = new URLSearchParams(window.location.search);
     const token = params.get("token");
@@ -21,7 +25,7 @@ export default function Navigation() {
 
     if (
       token === "secure-token" ||
-      (referrer && allowedReferrers.some((url) => referrer.includes(url)))
+      (referrer && allowedReferrers.some((url) => referrer.startsWith(url)))
     ) {
       setShowResume(true);
     }
